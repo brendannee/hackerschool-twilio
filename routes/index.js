@@ -26,9 +26,10 @@ module.exports = function routes(app){
 
     var twiml = '<?xml version="1.0" encoding="UTF-8" ?>\n';
     
-    twiml += '<Response><Say>Calling ' + toCall.name + '</Say>';
-    twiml += '<Play>http://api.twilio.com/Cowbell.mp3</Play>';
-    twiml += '<Dial>' + toCall.number + '</Dial></Response>';
+    twiml += '<Response>\n<Say>Calling ' + toCall.name + '</Say>\n';
+    twiml += '<Play>http://api.twilio.com/Cowbell.mp3</Play>\n';
+    //twiml += '<Dial>' + toCall.number + '</Dial>\n';
+    twiml += '</Response>\n';
     res.send(twiml);
   });
 
