@@ -23,7 +23,7 @@ module.exports = function routes(app){
     
     var toCall = hs[Math.floor(Math.random()*hs.length)];
 
-    var twiml = '<?xml version="1.0" encoding="UTF-8" ?>';
+    var twiml = '<?xml version="1.0" encoding="UTF-8" ?>\n';
     
     twiml += '<Response><Say>Calling ' + toCall.name + '</Say>';
     twiml += '<Play>http://api.twilio.com/Cowbell.mp3</Play>';
