@@ -38,6 +38,9 @@ module.exports = function routes(app){
     res.send(twiml, {'Content-Type':'text/xml'}, 200)
   });
 
+  app.get('/', function(req, res){
+    res.send('<!DOCTYPE html><html><head><title>516-864-HACK</title><style>h1{text-align:center;}</style></head><body><h1>516-864-4225</h1><h1>516-864-HACK</h1></body></html>');
+  });
 
   //Nothing specified
   app.all('*', function notFound(req, res) {
