@@ -8,13 +8,20 @@ var hs = [
   },
   {
       name: 'Dave'
-    , number: '3472642736'
+    , number: '9145231085'
   },
   {
       name: 'Nick'
-    , number: '3472642736'
+    , number: '6103487428'
   }
-]
+];
+
+//Bias towards dave
+hs.push({
+      name: 'Dave'
+    , number: '9145231085'
+  });
+
 
 module.exports = function routes(app){
 
