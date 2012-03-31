@@ -43,8 +43,7 @@ module.exports = function routes(app){
     var twiml = '<?xml version="1.0" encoding="UTF-8" ?>\n';
     twiml += '<Response>\n';
     twiml += '<Sms>Texting ' + toText.name + '</Sms>\n';
-    //twiml += '<Sms to="' + toText.number + '">' + req.params.Body + '</Sms>\n';
-    twiml += '<Sms to="4153736442">' + req.query.Body + '</Sms>\n';
+    twiml += '<Sms to="' + toText.number + '">' + req.query.Body + '</Sms>\n';
     twiml += '</Response>\n';
     res.send(twiml, {'Content-Type':'text/xml'}, 200)
   });
