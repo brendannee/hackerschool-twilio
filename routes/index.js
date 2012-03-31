@@ -25,9 +25,8 @@ module.exports = function routes(app){
 
     var twiml = '<?xml version="1.0" encoding="UTF-8" ?>\n';
     
-    twiml += '<Response>\n<Say>Calling ' + toCall.name + '</Say>\n';
-    twiml += '<Play>http://api.twilio.com/Cowbell.mp3</Play>\n';
-    //twiml += '<Dial>' + toCall.number + '</Dial>\n';
+    twiml += '<Response>\n<Say>Welcome. Calling ' + toCall.name + '</Say>\n';
+    twiml += '<Dial>' + toCall.number + '</Dial>\n';
     twiml += '</Response>\n';
     res.send(twiml, {'Content-Type':'text/xml'}, 200)
   });
