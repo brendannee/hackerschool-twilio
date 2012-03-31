@@ -20,6 +20,7 @@ module.exports = function routes(app){
 
   /* Routes */
   app.get('/api/incoming', function(req, res){
+    res.contentType('text/xml');
     
     var toCall = hs[Math.floor(Math.random()*hs.length)];
 
@@ -28,7 +29,7 @@ module.exports = function routes(app){
     twiml += '<Response><Say>Calling ' + toCall.name + '</Say>';
     twiml += '<Play>http://api.twilio.com/Cowbell.mp3</Play>';
     twiml += '<Dial>' + toCall.number + '</Dial></Response>';
-    res.send(twiml, {'Content-Type':'text/xml'}, 200);
+    res.send(twiml);
   });
 
 
